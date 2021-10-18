@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto:wght@100&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,21 +7,57 @@
 /*************Header Section**********/
 .header-section {
   background: url(./Assets/bg-content.jpg);
-}
-.paragraphe {
   text-align: center !important;
 }
-.paragraphe span {
+hr {
+  border: none;
+  height: 2px;
+  background: #dddddd;
+  width: 50%;
+  margin: auto;
+  margin-top: 2px;
+}
+.paragraphe {
+  margin: 20px;
+}
+span {
   font-family: "Sacramento", cursive;
   color: #f78812;
   font-size: 35px;
   font-weight: 500;
 }
 .paragraphe p pre {
-  font-family: "montserrat", sans-serif;
-  font-size: 10px;
+  font-family: "Open Sans Condensed", sans-serif;
   text-align: center !important;
-  color: black;
+}
+/*************About-Section***********/
+h4 {
+  text-align: center;
+  color: #f78812;
+  font-weight: bold;
+}
+#about-l {
+  height: 1px;
+  width: 5%;
+  background-color: #dddddd;
+  margin-top: 2px;
+  margin-left: 500px;
+}
+.hr-left {
+  margin-top: -10px;
+}
+.hr-right #about-r {
+  height: 1px;
+  width: 5%;
+  background-color: #dddddd;
+  margin-top: 2px;
+  margin-left: 730px;
+}
+.hr-right {
+  margin-top: -5px;
+}
+.title {
+  margin-bottom: 20px;
 }
 /*************Galerie Section ********/
 h2 {
@@ -133,15 +170,36 @@ h2 {
 
 /*******************Media Query *************/
 @media screen and (max-width: 960px) {
+  .row {
+    display: flex;
+    align-items: center;
+    flex: 100%;
+    max-width: 100%;
+  }
   .col {
     flex: 50%;
     max-width: 80%;
   }
+  .next-arrow {
+    display: none;
+  }
+  .prev-arrow {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  .col {
+  .row {
+    display: flex;
+    align-items: center;
     flex: 100%;
     max-width: 100%;
+  }
+
+  .next-arrow {
+    display: none;
+  }
+  .prev-arrow {
+    display: none;
   }
 }
