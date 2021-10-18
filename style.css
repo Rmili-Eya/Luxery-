@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+/*************Header Section**********/
+.header-section {
+  background: url(./Assets/bg-content.jpg);
+}
+.paragraphe {
+  text-align: center !important;
+}
+.paragraphe span {
+  font-family: "Sacramento", cursive;
+  color: #f78812;
+  font-size: 35px;
+  font-weight: 500;
+}
+.paragraphe p pre {
+  font-family: "montserrat", sans-serif;
+  font-size: 10px;
+  text-align: center !important;
+  color: black;
+}
+/*************Galerie Section ********/
+h2 {
+  text-align: center;
+  color: #865439;
+  font-weight: bold;
+  font-family: "montserrat", sans-serif;
+}
+
+.next-arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  background: url(./Assets/next-galerie.png) center center no-repeat;
+  background-size: 15%;
+}
+.prev-arrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  background: url(./Assets/prev-galerie.png) center center no-repeat;
+  background-size: 15%;
+}
+.Galeries {
+  padding: 40px 0;
+  background: url(./Assets/bg-galerie.jpg);
+}
+.inner {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+  animation: 30s slidy infinite;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.col {
+  flex: 20%;
+  max-width: 20%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.galerie {
+  margin: 5px;
+  background: #fff;
+  border: 6px solid #fff;
+  float: left;
+  position: relative;
+}
+.galerie:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  bottom: 0;
+  transition: height 0.5s ease-out;
+}
+.galerie:hover:before {
+  height: 100%;
+  background-image: url(./Assets/hover-box-galerie.png),
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* @keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+} */
+
+/*******************Media Query *************/
+@media screen and (max-width: 960px) {
+  .col {
+    flex: 50%;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .col {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
